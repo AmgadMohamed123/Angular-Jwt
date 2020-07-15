@@ -1,0 +1,113 @@
+<!--Start Container-->
+<div class="container " >
+    <h1 class="text-center" style="color:indianred;margin-top: 15px;margin-bottom:20px;margin-right: 150px;">{{'UPDATECLASS'|translate}}</h1>
+  <hr/>
+    <!--Start Form-->
+    <form #classForm="ngForm">
+      <!--Start Row-->
+    <div class="row">
+     
+        <div class="col-sm-6">
+    
+        
+        
+        <!--Start Class name group-->
+  
+        <div class="form-group">
+          <div >
+              <input type="text" #className="ngModel" name="className" ngModel   placeholder="{{'CLASSNAME'|translate}}" required class="form-control" autofocus>
+          </div>
+          <div *ngIf="className.touched &&className.errors?.required"   class="alert alert-danger  margin" style="text-align: start;">{{'REQUIRED-NAME'|translate}}</div>
+  
+      </div>
+            <!--End Class name group-->
+  
+  
+  
+  
+            <!--Start Class Floor group-->
+  
+      <div class="form-group">
+          <div>
+              <input type="number" #classFloor="ngModel"  ngModel required  name="classFloor" placeholder="{{'CLASSFLOOR'|translate}}" class="form-control">
+          </div>
+          <div *ngIf="classFloor.touched &&classFloor.errors?.required"   class="alert alert-danger  margin" style="text-align: start;">{{'REQUIRED-FLOOR'|translate}}</div>
+  
+      </div>
+  
+                <!--End Employee Age group-->
+  
+           
+  
+              <!--Start class max of Birth group-->
+  
+
+              <div class="form-group">
+                <div>
+                    <input type="number" #maxSize="ngModel"   ngModel required  name="maxSize" placeholder="{{'CLASSMAXIMUMSIZE'|translate}}" class="form-control">
+                </div>
+                <div *ngIf="maxSize.touched &&maxSize.errors?.required"   class="alert alert-danger  margin" style="text-align: start;">{{'REQUIRED-MAX'|translate}}</div>
+        
+            </div>  
+      
+  
+              <!--End class max of Birth group-->
+  
+  
+                          <!--Start class current size-->
+  
+  
+                          <div class="form-group">
+                            <div>
+                                <input type="number"  #currentSize="ngModel"  ngModel required  name="currentSize" placeholder="{{'CLASSCURRENTSIZE'|translate}}" class="form-control">
+                            </div>
+                            <div *ngIf="currentSize.touched &&currentSize.errors?.required"   class="alert alert-danger  margin" style="text-align: start;">{{'REQUIRED-CRRENT'|translate}}</div>
+                    
+                        </div>  
+                  
+  
+  
+                            <!--End class current size-->
+  
+
+
+
+                             <!--Start class free size-->
+  
+  
+                             <div class="form-group">
+                                <div>
+                                    <input type="number"  #freeSize="ngModel"  ngModel required  name="freeSize" placeholder="{{'CLASSFREESIZE'|translate}}" class="form-control">
+                                </div>
+                                <div *ngIf="freeSize.touched &&freeSize.errors?.required"   class="alert alert-danger  margin" style="text-align: start;">{{'REQUIRED-FREE'|translate}}</div>
+                        
+                            </div>  
+                      
+  
+  
+                            <!--End class free size-->
+  
+
+
+
+
+
+
+  
+  
+  
+  
+                          
+  </div>
+  </div>
+      <!--End row-->
+  <hr/>
+      <button  style="margin:auto;margin-bottom: 5px;display:block;" [disabled]="classForm.invalid" class="btn btn-danger">{{'UPDATECLASS'|translate}}</button>
+      <button  routerLink="/list-class" style="margin:auto;display:block;"  class="btn btn-secondary">{{'CLASSLISTRETURNBUTTON'|translate}}</button>
+
+    </form>
+   
+    <!--End form-->
+     </div>
+    
+     <!--End Container-->

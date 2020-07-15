@@ -1,0 +1,40 @@
+<div class="container text-center">
+    <h2 class="text-center">CLASSESLIST</h2>
+    <table class="table table-bordered table-hover table-stripped">
+        <thead class="thead-dark">
+          <tr class="text-center">
+            <th scope="col">ID</th>
+            <th scope="col">CLASSNAME</th>
+            <th scope="col">CLASSFLOOR</th>
+            <th scope="col">CLASSMAXIMUMSIZE</th>
+            <th scope="col">CLASSCURRENTSIZE</th>
+            <th scope="col">CLASSFREEPLACE</th>
+            <th colspan="3" class="text-center" scope="col">ACTIONS</th>
+    
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let class of classes " class="text-center">
+            <th scope="row">class.id</th>
+            <td>class.className</td>
+            <td>class.classFloor</td>
+            <td>class.maxSize</td>
+            <td>class.currentSize</td>
+            <td>class.freeSize</td>
+            <td ><button class="btn btn-warning" routerLink="/update-class">UPDATE</button></td>
+            <td ><button class="btn btn-primary" routerLink="/details-class">DETAILS</button></td>
+            <td ><button class="btn btn-danger">DELETE</button></td>
+    
+          </tr>
+          
+          
+        </tbody>
+      </table>
+      <div>
+        <pagination-controls nextLabel="NEXTLABEL" previousLabel="PREVIOUSLABEL"   id="listing_pagination" maxSize="5" directionLinks="true" (pageChange)="page=$event"></pagination-controls>
+      </div>
+      <div  class="container text-center oprations">
+          <button class="btn btn-success" routerLink="/add-class">ADDCLASS</button>
+          <button class="btn btn-primary" routerLink="/search-class">SEARCHCLASS</button>
+      </div>
+      </div>
